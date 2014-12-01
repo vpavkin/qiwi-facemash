@@ -1,0 +1,15 @@
+<template name="statsPage">
+    <div class="stats-page">
+        {{#with photo}}
+        <div class="stats-photo-wrapper">
+            <div class="photo">
+                <img src="{{url}}" alt="{{name}}"/>
+                <div class="description">
+                    <div class="name">{{name}}</div>
+                    <div class="stars">{{stars}}</div>
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+</template>

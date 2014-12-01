@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'WhitneyBold';
+	src: url('../fonts/Whitney-Bold.woff'), url('../fonts/Whitney-Bold.otf');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'WhitneyLight';
+	src: url('../fonts/Whitney-Light.woff'), url('../fonts/Whitney-Light.otf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'WhitneyMedium';
+	src: url('../fonts/Whitney-Medium.woff'), url('../fonts/Whitney-Medium.otf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'WhitneySemibold';
+	src: url('../fonts/Whitney-Semibold.woff'), url('../fonts/Whitney-Semibold.otf');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'WhitneyBook';
+	src: url('../fonts/Whitney-Book.woff'), url('../fonts/Whitney-Book.otf');
+	font-weight: 100;
+}
+
+@mixin font-wrapper($main, $font-weight) {
+	font-family: $main, Helvetica, Arial, sans-serif;
+	font-weight: $font-weight;
+}
+
+@mixin screen-font {
+	@include font-wrapper('WhitneyMedium', normal);
+}
+
+@mixin screen-font-bold {
+	@include font-wrapper('WhitneyBold', bold);
+}
+
+@mixin screen-font-semibold {
+	@include font-wrapper('WhitneySemibold', 600);
+}
+
+@mixin screen-font-book {
+	@include font-wrapper('WhitneyBook', 100);
+}
+
+@mixin screen-font-light {
+	@include font-wrapper('WhitneyLight', light);
+}

@@ -1,0 +1,9 @@
+.btn {
+	box-shadow: $button-shadow;
+	@include screen-font-book();
+
+	&:active {
+		box-shadow: none;
+		transform: translateY(1px);
+	}
+}

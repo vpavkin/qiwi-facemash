@@ -1,0 +1,51 @@
+body, h1 {
+	color: $main-text-color;
+	@include screen-font-light();
+}
+
+.document {
+	height: 100vh;
+	@include display-flex();
+	@include flex-direction(column);
+}
+
+.header {
+	height: 87px;
+}
+
+.footer {
+}
+
+.content {
+	@include flex(1);
+
+	@include display-flex(flex);
+	@include flex-direction(column);
+	overflow-y: auto;
+	margin: 10px auto;
+
+	a:not(.btn) {
+		color: $link-color;
+		&:hover {
+			color: $link-color;
+			border-bottom: $link-underlining-border;
+			text-decoration: none;
+		}
+	}
+
+	.main-block {
+		border-radius: 10px;
+		box-shadow: $navbar-shadow;
+		padding: 15px;
+	}
+
+	.inner-block {
+		box-shadow: inset $navbar-shadow;
+		background: $inner-block-background;
+		border-radius: 10px;
+
+		img {
+			box-shadow: inset $navbar-shadow;
+		}
+	}
+}

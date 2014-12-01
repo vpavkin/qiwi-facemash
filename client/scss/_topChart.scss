@@ -1,0 +1,50 @@
+.top-chart-table {
+	margin: auto;
+	td, th {
+		font-size: 3vh;
+		padding: 5px;
+	}
+	th {
+		@include screen-font-semibold();
+	}
+
+	td:first-child {
+		position: relative;
+		img {
+			max-height: 10vh;
+			min-height: 10vh;
+		}
+		span {
+			$size: 4vh;
+
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			font-size: $size*0.75;
+			height: $size;
+			width: $size;
+			line-height: $size*1.1;
+			border-radius: $size/2;
+			color: white;
+			text-align: center;
+			background-color: rgba(1, 129, 31, 0.80);
+		}
+	}
+
+	td:nth-child(2) {
+		padding-left: 20px;
+	}
+
+	td:nth-child(3) {
+		background: url('../img/star.png') center center no-repeat;
+		background-size: 100% 100%;
+		$size: 10vh;
+		font-size: $size*0.5;
+		height: $size;
+		width: $size;
+		line-height: $size;
+		@include text-shadow(0px 1px 0 #000000);
+		text-align: center;
+		color: $navbar-background;
+	}
+}

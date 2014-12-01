@@ -1,0 +1,15 @@
+<template name="topChartPage">
+    <div class="top-chart">
+        <h1>Топ звезд</h1>
+        <table class="top-chart-table">
+            <!--<tr>-->
+                <!--<th>Место</th>-->
+                <!--<th>Имя</th>-->
+                <!--<th>Звезд</th>-->
+            <!--</tr>-->
+            {{#each addPlaces photos}}
+            {{> statRow}}
+            {{/each}}
+        </table>
+    </div>
+</template>

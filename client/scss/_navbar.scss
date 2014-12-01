@@ -1,0 +1,46 @@
+.navbar {
+	box-shadow: $navbar-shadow;
+}
+
+.navbar-header {
+	float: none;
+	text-align: center;
+
+	a:not(.btn) {
+		@include transition(all 300ms ease 0);
+		@include transform(scale(0.9));
+		&:hover {
+			border-bottom: 2px dotted #ffffff;
+			text-decoration: none;
+		@include transform(scale(1))
+		}
+	}
+
+	h1 {
+		padding: 20px 0 25px 70px;
+		display: inline-block;
+		margin: auto;
+		position: relative;
+		white-space: nowrap;
+		&:before {
+			content: ' ';
+			position: absolute;
+			background: url('../img/face.png') no-repeat;
+			background-size: 40px 50px;
+			width: 50px;
+			height: 50px;
+			top: 15px;
+			left: 0;
+		}
+	}
+}
+
+.navbar-brand {
+	float: none;
+}
+
+.top-chart-button {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
